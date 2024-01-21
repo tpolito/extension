@@ -69,4 +69,12 @@ body {
     font-weight: 600;
     margin-top: 4px;
   }
+
+  &:hover {
+    outline: 2px solid white; 
+  }
+
+  &:focus-visible {
+    outline: 2px solid white; 
+  }
 }
