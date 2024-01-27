@@ -82,6 +82,12 @@ function populateLinkGrid() {
       url: 'https://merrysky.net/forecast/30.2423000,-97.7672000',
       icon: './assets/links/weather.png',
     },
+    {
+      name: 'Warframe hub',
+      category: 'games',
+      url: 'https://hub.warframestat.us/',
+      icon: null,
+    },
   ];
 
   // Chunk the links into categories
@@ -97,10 +103,18 @@ function populateLinkGrid() {
     const container = document.createElement('a');
     container.href = link.url;
     container.classList.add('link');
-    const linkImg = document.createElement('img');
-    const { hostname } = new URL(link.url);
-    linkImg.src = link.icon;
-    container.appendChild(linkImg);
+
+    if (link.icon !== null) {
+      const linkImg = document.createElement('img');
+      linkImg.src = link.icon;
+      container.appendChild(linkImg);
+    } else {
+      const linkIcon = document.createElement('span');
+      linkIcon.classList.add('linkIcon');
+      linkIcon.textContent = '🔗';
+      container.appendChild(linkIcon);
+    }
+
     const linkName = document.createElement('span');
     linkName.textContent = link.name;
     container.appendChild(linkName);
