@@ -7,9 +7,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  "chrome_url_overrides": {
-    "newtab": "new_tab.html"
-  },
   "icons": {
     "16": "assets/icon-16.png"
   },

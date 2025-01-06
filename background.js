@@ -20,9 +20,22 @@ function moveToPreviousTab() {
 }
 
 chrome.commands.onCommand.addListener(function (command) {
-  if (command === 'next-tab') {
+  if (command === "next-tab") {
     moveToNextTab();
-  } else if (command === 'previous-tab') {
+  } else if (command === "previous-tab") {
     moveToPreviousTab();
+  }
+});
+
+// ===================
+// NEW_TAB
+// ===================
+// Note: This is hack found here (https://stackoverflow.com/a/74540001) because by default you cannot unfocus chromes omni-bar
+chrome.tabs.onCreated.addListener((tab) => {
+  if (tab.pendingUrl === "chrome://newtab/") {
+    chrome.tabs.remove(tab.id);
+    chrome.tabs.create({
+      url: "./new_tab.html",
+    });
   }
 });
