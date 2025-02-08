@@ -1,101 +1,6 @@
 *,
 html {
   padding: 0;
-  *,
-  html {
-    padding: 0;
-    margin: 0;
-  }
-
-  body {
-    background-image: url("./assets/new_tab_bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 24px;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(1, 1, 1, 0.6);
-    padding: 12px;
-    color: white;
-    min-height: calc(100vh - calc(24px + 48px));
-    border-radius: 16px;
-  }
-
-  .dateTime {
-    font-size: 24px;
-    font-weight: 600;
-  }
-
-  .search {
-    height: 46px;
-    width: 600px;
-    border-radius: 24px;
-    padding: 0 12px;
-    font-size: 16px;
-    outline: none;
-    border: none;
-    margin: 24px 0;
-  }
-
-  .link-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    max-width: 800px;
-  }
-
-  .link {
-    height: 75px;
-    width: 75px;
-    border-radius: 16px;
-    background-color: rgba(1, 1, 1, 0.8);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 2px;
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    position: relative;
-
-    & img {
-      height: 50px;
-      width: 50px;
-      margin: auto;
-    }
-
-    & span {
-      font-weight: 600;
-      margin-top: 4px;
-    }
-
-    &:hover {
-      outline: 2px solid white;
-    }
-
-    &:focus-visible {
-      outline: 2px solid white;
-    }
-  }
-
-  .linkIcon {
-    font-size: 26px;
-  }
-
-  .linkHotkey {
-    position: absolute;
-    top: -12px;
-    right: -4px;
-    background-color: red;
-    padding: 2px;
-    border-radius: 100%;
-    width: 16px;
-    height: 16px;
-  }
   margin: 0;
 }
 
@@ -135,7 +40,6 @@ body {
 
 .link-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
   max-width: 800px;
@@ -152,6 +56,8 @@ body {
   padding: 2px;
   text-decoration: none;
   color: white;
+  font-size: 12px;
+  position: relative;
 
   & img {
     height: 50px;
@@ -159,13 +65,7 @@ body {
     margin: auto;
   }
 
-  & .linkIcon {
-    font-size: 24px;
-    margin: auto;
-  }
-
   & span {
-    font-size: 12px;
     font-weight: 600;
     margin-top: 4px;
   }
@@ -177,4 +77,21 @@ body {
   &:focus-visible {
     outline: 2px solid white;
   }
+}
+
+.linkIcon {
+  font-size: 26px;
+}
+
+.linkHotkey {
+  position: absolute;
+  top: -12px;
+  right: -4px;
+  background-color: coral;
+  padding: 2px;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
 }

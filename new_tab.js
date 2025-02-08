@@ -40,6 +40,13 @@ const links = [
     icon: "./assets/links/github.png",
     hotkey: "G",
   },
+  {
+    name: "Kagi assistant",
+    category: "development",
+    url: "https://kagi.com/assistant",
+    icon: "./assets/links/kagi.png",
+    hotkey: "k",
+  },
 ];
 
 function init() {
